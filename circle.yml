@@ -1,6 +1,3 @@
-general:
-   artifacts:
-    - target
 test:
  override:
     - mvn --fail-never dependency:go-offline || true
