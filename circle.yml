@@ -3,8 +3,7 @@ general:
   - "test.txt" 
 test:
  override:
-    #- mvn --fail-never dependency:go-offline || true
-    - npm run test:circleci
+    - mvn --fail-never dependency:go-offline || true
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
